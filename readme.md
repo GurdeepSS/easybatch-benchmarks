@@ -64,29 +64,35 @@ public class Customer {
 }
 ```
 
+# Checkout source code
+
+```
+$>git clone https://github.com/EasyBatch/easybatch-benchmarks.git
+```
+
 # Run the CSV benchmark
 
 ```
-$>cd easybatch-bench
-$>cd mvn clean install
+$>cd easybatch-benchmarks
+$>cd mvn install
 $>cd target
-$>java -Dorg.easybatch.bench.count=10000 -cp "easybatch-bench-3.0.0.jar:dependency/*" org.easybatch.bench.CsvBenchmark
+$>java -Dorg.easybatch.bench.count=10000 -cp "easybatch-benchmark-3.0.0.jar:dependency/*" org.easybatch.bench.CsvBenchmark
 ```
 
 # Run the XML benchmark
 
 ```
-$>cd easybatch-bench
-$>cd mvn clean install
+$>cd easybatch-benchmarks
+$>cd mvn install
 $>cd target
-$>java -Dorg.easybatch.bench.count=10000 -cp "easybatch-bench-3.0.0.jar:dependency/*" org.easybatch.bench.XmlBenchmark
+$>java -Dorg.easybatch.bench.count=10000 -cp "easybatch-benchmark-3.0.0.jar:dependency/*" org.easybatch.bench.XmlBenchmark
 ```
 
 # Notes
 
 If you are using MS Windows, please use the `;` classpath separator in the previous commands as follows:
 
-`-cp "easybatch-bench-3.0.0.jar;dependency/*"`
+`-cp "easybatch-benchmark-3.0.0.jar;dependency/*"`
 
 Use the JVM property `-Dorg.easybatch.bench.count` to specify the number of records to generate.
 
